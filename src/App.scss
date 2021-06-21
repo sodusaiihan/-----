@@ -1,0 +1,16 @@
+.app {
+  height: 15vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh -150px);
+    background-color: #fff;
+    position: relative;
+    top: 130px;
+  }
+
+  > * {
+    width: 100vw;
+    height: calc(100vh - 130px);
+  }
+}
