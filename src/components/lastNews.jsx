@@ -52,15 +52,19 @@ const Content = styled.div`
 
     .lastNewsItemContent {
       margin: 1rem;
+      height: 12rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
       span {
-        color: rgb(0, 0, 0, 0.4);
+        align-self: flex-end;
+        color: rgb(0, 0, 0, 0.5);
+        font-weight: 500;
+        font-size: 1.2rem;
       }
     }
   }

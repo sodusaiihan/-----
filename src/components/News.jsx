@@ -1,18 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
-import { makeStyles } from '@material-ui/core/styles'
-import { ChromeReaderMode, Forum, Movie } from '@material-ui/icons'
 import { ЦагҮеийнМэдээлэл } from '../data/NewsData'
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-}))
-
 function News() {
-  const classes = useStyles()
   return (
     <Container>
       {ЦагҮеийнМэдээлэл.map((data) => (
@@ -21,33 +11,12 @@ function News() {
           <div className="news">
             <h3 className="newsTitle">{data.title}</h3>
             <div className="newsTag">
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<ChromeReaderMode />}
-                size="small"
-              >
+              <a href="/#" className="нийтлэл">
                 Нийтлэл
-              </Button>
-              <Button
-                variant="contained"
-                color="default"
-                className={classes.button}
-                startIcon={<Movie />}
-                size="small"
-              >
-                Бичлэг
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-                startIcon={<Forum />}
-                size="small"
-              >
+              </a>
+              <a href="/#" className="ярилцлага">
                 Ярилцлага
-              </Button>
+              </a>
             </div>
           </div>
         </Wrap>
@@ -67,9 +36,11 @@ const Container = styled.div`
   grid-row-gap: 3rem;
   width: 95%;
 `
+
 const Wrap = styled.div`
   width: 90%;
-  height: 300px;
+  height: 350px;
+  margin: 1rem;
   -webkit-box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
   border-radius: 1rem;
@@ -95,26 +66,43 @@ const Wrap = styled.div`
       width: 90%;
       text-align: left;
       text-transform: uppercase;
-      /* text-indent: 20px; */
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: left;
+      line-height: 1.6rem;
+      text-indent: 2rem;
+      text-align: left;
+      letter-spacing: 0.1rem;
+      word-spacing: 0.5rem;
       color: rgb(0, 0, 0, 0.8);
-      margin-top: -3rem;
+      z-index: 1;
     }
   }
+
   .newsTag {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 2rem 3rem;
 
     .нийтлэл {
-      padding: 1rem 3rem;
-      background-color: yellow;
+      padding: 0.8rem 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-right: 4rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      font-size: 1.4rem;
+      border: 0.2rem solid rgba(0, 0, 0, 0.4);
     }
-    .бичлэг {
-      padding: 1rem 3rem;
-      background-color: brown;
+
+    .ярилцлага {
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+      font-size: 1.4rem;
+      border: 0.2rem solid rgba(0, 0, 0, 0.1);
     }
   }
 `

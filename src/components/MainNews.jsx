@@ -112,7 +112,7 @@ const Content = styled.div`
           border-bottom: 0.1rem solid rgb(0, 0, 0, 0.8);
           span {
             width: 90%;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 300;
             margin: 2rem;
             padding: 1rem 0;

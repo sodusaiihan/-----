@@ -3,6 +3,7 @@ import {
   Apartment,
   Explore,
   Gavel,
+  Equalizer,
   InsertChart,
   School,
   Block,
@@ -34,7 +35,7 @@ function Navigation() {
           </li>
           <li className="side-nav-item">
             <a href="#legislation" className="side-nav-link">
-              <Gavel className="side-nav-icon" />
+              <Equalizer className="side-nav-icon" />
               <span>СТАТИСТИК</span>
             </a>
           </li>

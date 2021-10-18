@@ -7,6 +7,7 @@ import Home from './components/Home'
 import BottomTag from './components/BottomTag'
 import NewsList from './components/NewsList'
 import MainNews from './components/MainNews'
+import Tab from './components/Tab'
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
             <News />
             <BottomTag />
             <NewsList />
+            <Tab />
           </div>
         </Route>
         <Route path="/news">
